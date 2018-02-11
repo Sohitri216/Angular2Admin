@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="login-form-container">
+    <div class="login-form-wrapper">
+      <form class="login-form" #loginForm="ngForm" (ngSubmit)="loginForm.valid && login()" novalidate>
+        <h5 class="heading">SIGN IN</h5>
+        <div class="form-body">
+          <div class="login-field">
+            <input type="text" class="input-field-login" id="email" [(ngModel)]="loginData.email" #email="ngModel" (focus)="focusEmail()" (focusout)="focusOutEMail()" (ngModelChange)="detectChangeEmail($event)" name="email" required pattern="[a-zA-Z0-9\-\_\.\+]+@[a-zA-Z0-9\-\_\.]+\.[a-zA-Z0-9\-\_]+$" minlength="5">
+            <label [ngClass]="{'normal-label': !labelActive, 'up-label': labelActive}" for="name">Email</label>
+            <div *ngIf="email.errors && (email.dirty || email.touched || loginForm.submitted)">
+              <p *ngIf="email.errors.required" class="error-msg">
+                The email is required
+              </p>
+              <p *ngIf="email.errors.pattern" class="error-msg">
+                The email is invalid
+              </p>
+            </div>
+            <!-- val:::{{login.email}} -->
+          </div>
+          <div class="pad-tb-50 relative login-field">
+            <input type="password" class="input-field-pass" id="password" [(ngModel)]="loginData.password" #password="ngModel" (focus)="focusPassword()" (focusout)="focusOutPassword()" (ngModelChange)="detectChangePassword($event)" name="password" required>
+            <label [ngClass]="{'normal-label top-77': !labelActivePass, 'up-label-password': labelActivePass}" for="name">Password</label>
+            <div *ngIf="password.errors && (password.dirty || password.touched || loginForm.submitted)">
+              <p *ngIf="password.errors.required" class="error-msg">
+                The password is required
+              </p>
+            </div>
+          </div>
+          <div class="other-login-info overflow-auto">
+            <div class="checkbox checkbox-danger pull-left">
+              <input id="checkbox6" type="checkbox" checked="" [checked]="saveUsername" (change)="saveUsername = !saveUsername">
+              <label for="checkbox6">
+                Remember Me
+              </label>
+            </div>
+            <div class="pull-right margin-tb-10 forgot-pass" (click)="goToFP()">
+              <span>Forgot Password?</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="page-title">Dashboard
+  <small>Know your current business status at a glance</small>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="dashboard-stat2 pad-15 box-shadow">
+      <div class="display overflow-auto margin-bottom-10">
+        <div class="number pull-left">
+          <h3 class="font-green-sharp">
+             <span data-counter="counterup" class="color-theme">{{this.orderSummary.totalOrders}}</span>
+                <!-- <small class="font-green-sharp">$</small> -->
+          </h3>
+          <small>TODAY'S TOTAL ORDER</small>
+        </div>
+        <div class="icon pull-right">
+          <i class="fa fa-cutlery color-theme" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="dashboard-stat2 pad-15 box-shadow">
+      <div class="display overflow-auto margin-bottom-10">
+        <div class="number pull-left">
+          <h3 class="font-red-haze">
+                                    <span data-counter="counterup" class="color-theme">{{this.orderSummary.newOrders}}</span>
+                                        </h3>
+          <small>TODAY'S NEW ORDER</small>
+        </div>
+        <div class="icon pull-right">
+          <i class="fa fa-cutlery color-theme" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="dashboard-stat2 pad-15 box-shadow">
+      <div class="display overflow-auto margin-bottom-10">
+        <div class="number pull-left">
+          <h3 class="font-red-haze">
+                                    <span data-counter="counterup" class="color-theme">{{this.orderSummary.completedOrders}}</span>
+                                        </h3>
+          <small>TODAY'S COMPLETED ORDER</small>
+        </div>
+        <div class="icon pull-right">
+          <i class="fa fa-cutlery color-theme" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="box-shadow overflow-auto margin-lr-15">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad-right-0">
+      <div class="dashboard-stat2 pad-15 box-shadow-none marginb-0">
+        <div class="display overflow-auto marginb-0 border-right">
+          <div class="number pull-left">
+            <h3 class="font-green-sharp">
+             <span data-counter="counterup" class="color-theme">{{this.paymentSummary.revenueCash}}
+             <span class="omr">OMR</span>
+             </span>
+                <!-- <small class="font-green-sharp">$</small> -->
+          </h3>
+            <small>REVENUE BY CASH</small>
+          </div>
+          <!--  <div class="icon pull-right">
+          <i class="fa fa-cutlery color-theme" aria-hidden="true"></i>
+        </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad-right-0 pad-left-0">
+      <div class="dashboard-stat2 pad-15 box-shadow-none marginb-0">
+        <div class="display overflow-auto marginb-0 border-right">
+          <div class="number pull-left">
+            <h3 class="font-red-haze">
+                                    <span data-counter="counterup" class="color-theme">{{this.paymentSummary.revenueCard}}
+                                    <span class="omr">OMR</span></span>
+                                        </h3>
+            <small>REVENUE BY CARD</small>
+          </div>
+          <!-- <div class="icon pull-right"> -->
+          <!-- <i class="fa fa-cutlery color-theme" aria-hidden="true"></i> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad-left-0">
+      <div class="dashboard-stat2 pad-15 box-shadow-none marginb-0">
+        <div class="display overflow-auto marginb-0">
+          <div class="number pull-left">
+            <h3 class="font-red-haze">
+                                    <span data-counter="counterup" class="color-theme">{{this.paymentSummary.totalRevenue}}
+                                     <span class="omr left-140">OMR</span>
+                                     </span>
+                                        </h3>
+            <small>TOTAL REVENUE</small>
+          </div>
+          <!--  <div class="icon pull-right">
+          <i class="fa fa-cutlery color-theme" aria-hidden="true"></i>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
